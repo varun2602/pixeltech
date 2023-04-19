@@ -13,9 +13,9 @@ def create_data():
     response = r.json()
     print(response) 
 
-def get_data():
+def get_data(user):
     data = {
-        'user_name':'varun'
+        'user_name':user
     }
     json_data = json.dumps(data)
     r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
@@ -26,6 +26,6 @@ def test_route():
     r = requests.post(url = 'https://pixeltech.onrender.com/img/test')
     response = r.json()
     print(response)
-get_data()
+get_data('varun')
 
 # get_data()

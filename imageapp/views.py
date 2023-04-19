@@ -163,10 +163,12 @@ def result(request):
             'user_name':user
         }
         json_data = json.dumps(data)
-        r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
+        # r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
+        r = requests.post(url = 'https://pixeltech.onrender.com/img/test')
        
         response = r.json()
-        return HttpResponse(f'{json_data}')
+        context = {'response':response}
+        return render(request, 'test.html', context)
 
         context = {'response':response}
         return render(request, 'results.html', context)
