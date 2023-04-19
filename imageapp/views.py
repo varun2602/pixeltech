@@ -168,10 +168,10 @@ def result(request):
        
         # response = r.json()
         # context = {'response':response}
-        # return render(request, 'test.html', context)
+        return render(request, 'test.html')
 
         # context = {'response':response}
-        return render(request, 'results.html')
+        # return render(request, 'test.html')
     
 @csrf_exempt
 def test_route(request):
