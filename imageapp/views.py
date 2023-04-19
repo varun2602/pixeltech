@@ -143,7 +143,7 @@ def image_slider(request):
             }
             json_data = json.dumps(data)
             print(json_data)
-            r = requests.post(url = 'http://127.0.0.1:8000/img/create_data/', data = json_data)
+            r = requests.post(url = 'https://pixeltech.onrender.com/img/create_data/', data = json_data)
 
             print(r.json())
             
@@ -163,7 +163,7 @@ def result(request):
             'user_name':user
         }
         json_data = json.dumps(data)
-        r = requests.get(url = 'http://127.0.0.1:8000/img/get_data/', data = json_data)
+        r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
        
         response = r.json()
 
