@@ -171,7 +171,7 @@ def result(request):
         # return render(request, 'test.html')
 
         context = {'response':response}
-        return render(request, 'results.html', context)
+        return render(request, 'results.html')
     
 @csrf_exempt
 def test_route(request):
