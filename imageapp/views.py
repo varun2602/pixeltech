@@ -157,21 +157,21 @@ def test(request):
 @csrf_exempt
 def result(request):
     if request.method == 'GET':
-        user = request.user.username
-        print(user)
-        data = {
-            'user_name':user
-        }
-        json_data = json.dumps(data)
-        # r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
-        r = requests.post(url = 'https://pixeltech.onrender.com/img/test')
+        # user = request.user.username
+        # print(user)
+        # data = {
+        #     'user_name':user
+        # }
+        # json_data = json.dumps(data)
+        # # r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
+        # r = requests.post(url = 'https://pixeltech.onrender.com/img/test')
        
-        response = r.json()
-        context = {'response':response}
-        return render(request, 'test.html', context)
+        # response = r.json()
+        # context = {'response':response}
+        # return render(request, 'test.html', context)
 
-        context = {'response':response}
-        return render(request, 'results.html', context)
+        # context = {'response':response}
+        return render(request, 'results.html')
     
 @csrf_exempt
 def test_route(request):
