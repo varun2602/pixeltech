@@ -166,6 +166,7 @@ def result(request):
         r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
        
         response = r.json()
+        return HttpResponse(f'{json_data}')
 
         context = {'response':response}
         return render(request, 'results.html', context)
