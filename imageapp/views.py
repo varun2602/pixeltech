@@ -175,9 +175,7 @@ def result(request):
     
 @csrf_exempt
 def test_route(request):
-    otp_entered = request.POST.get('otp')
-    print(otp_entered)
-    return HttpResponse(f'{otp_entered}')
+    return render(request, 'test.html')
 
 
 
