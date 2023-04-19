@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        
+    </script>
+    <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        button {
+           margin: 0 10px; 
+        }
+   
+        body {
+           background-image: url("https://cdn.wallpapersafari.com/87/66/iB5YUc.jpg");
+           background-size: cover;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{user}}</h1>
+    <!-- <a href="{% url 'logout' %}"><button id = 'logout'>Logout</button></a>
+    <a href="{% url 'image' %}"><button id = 'start'>Start</button></a> -->
+    <div class="container">
+    <a href="{% url 'logout' %}"><button type="button" id = "logout" class="btn btn-primary">Logout</button></a>
+    <a href="{% url 'image' %}"><button type="button" id = "start" class="btn btn-danger">Start</button></a>
+    </div>
+</body>
+</html>

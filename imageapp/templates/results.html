@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* add margin to rows */
+tr {
+  margin-bottom: 10px;
+}
+
+/* add margin to columns */
+td {
+  margin-right: 10px;
+}
+
+    </style>
+    <title>Results</title>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>User Response</th>
+            <th>Response Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in response %}
+          <tr>
+            <td>{{ r.user_name }}</td>
+            <td>{{ r.user_response }}</td>
+            <td>{{ r.response_image }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+</body>
+</html>
