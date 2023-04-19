@@ -15,10 +15,10 @@ def create_data():
 
 def get_data():
     data = {
-        'user_name':'mrunal'
+        'user_name':'varun'
     }
     json_data = json.dumps(data)
-    r = requests.get(url = 'http://127.0.0.1:8000/img/get_data/', data = json_data)
+    r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
     response = r.json()
     print(response)
 
@@ -26,6 +26,6 @@ def test_route():
     r = requests.post(url = 'https://pixeltech.onrender.com/img/test')
     response = r.json()
     print(response)
-test_route()
+get_data()
 
 # get_data()
