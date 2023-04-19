@@ -48,4 +48,9 @@ def get_data(request):
                 data = {'message':'Username invalid'}
                 json_data = json.dumps(data)
                 return HttpResponse(json_data, content_type = 'application/json')
-
+@csrf_exempt
+def test(request):
+    if request.method == 'POST':
+        data = {'message':'Imageapi route works'}
+        json_data = json.dumps(data)
+        return HttpResponse(json_data, content_type = 'application/json')

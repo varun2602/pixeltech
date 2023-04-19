@@ -22,4 +22,10 @@ def get_data():
     response = r.json()
     print(response)
 
-get_data()
+def test_route():
+    r = requests.post(url = 'https://pixeltech.onrender.com/img/test_route')
+    response = r.json()
+    print(response)
+test_route()
+
+# get_data()
