@@ -160,7 +160,7 @@ def result(request):
         user = request.user.username
         # print(user)
         data = {
-            'user_name':str(user)
+            'user_name':'varun'
         }
         json_data = json.dumps(data)
         r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
@@ -171,7 +171,7 @@ def result(request):
         # return render(request, 'test.html')
 
         context = {'response':response}
-        return render(request, 'results.html', context)
+        return render(request, 'test.html', context)
     
 @csrf_exempt
 def test_route(request):
