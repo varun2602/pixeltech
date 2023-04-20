@@ -160,7 +160,7 @@ def result(request):
         user = request.user.username
         # print(user)
         data = {
-            'user_name':user
+            'user_name':str(user)
         }
         json_data = json.dumps(data)
         r = requests.get(url = 'https://pixeltech.onrender.com/img/get_data/', data = json_data)
